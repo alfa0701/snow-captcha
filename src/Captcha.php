@@ -39,6 +39,10 @@ class Captcha
 
     public function __construct($settings)
     {
+        if(!isset($_SESSION)) {
+            session_start();
+        }
+
         if( !function_exists('gd_info') ) {
             throw new \Exception('Required GD library is missing');
         }
