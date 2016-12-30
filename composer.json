@@ -1,0 +1,32 @@
+{
+  "name": "snowsoft/snow-captcha",
+  "description": "Php Classic Captcha",
+  "license": "MIT",
+  "keywords": [
+    "Captcha"
+  ],
+  "type" :"library",
+  "homepage": "https://github.com/snowsoft/form-creator",
+  "authors": [
+    {
+      "name": "Abdulkadir KAR",
+      "email": "abdulkadirkar@gmail.com"
+    }
+  ],
+
+  "require": {
+    "php": ">=5.3.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~4.0",
+    "orchestra/testbench": "~3.0"
+  },
+
+  "autoload": {
+    "psr-0": {
+      "Snowsoft\\FormCreator": "src/"
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
