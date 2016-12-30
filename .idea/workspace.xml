@@ -3,17 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="968cd433-92b6-405b-857f-85fcb0c87cca" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Snowsoft/Captcha/Captcha.php" afterPath="$PROJECT_DIR$/src/Captcha.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Snowsoft/Captcha/media/backgrounds/45-degree-fabric.png" afterPath="$PROJECT_DIR$/src/media/backgrounds/45-degree-fabric.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Snowsoft/Captcha/media/backgrounds/cloth-alike.png" afterPath="$PROJECT_DIR$/src/media/backgrounds/cloth-alike.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Snowsoft/Captcha/media/backgrounds/grey-sandbag.png" afterPath="$PROJECT_DIR$/src/media/backgrounds/grey-sandbag.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Snowsoft/Captcha/media/backgrounds/kinda-jean.png" afterPath="$PROJECT_DIR$/src/media/backgrounds/kinda-jean.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Snowsoft/Captcha/media/backgrounds/polyester-lite.png" afterPath="$PROJECT_DIR$/src/media/backgrounds/polyester-lite.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Snowsoft/Captcha/media/backgrounds/stitched-wool.png" afterPath="$PROJECT_DIR$/src/media/backgrounds/stitched-wool.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Snowsoft/Captcha/media/backgrounds/white-carbon.png" afterPath="$PROJECT_DIR$/src/media/backgrounds/white-carbon.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Snowsoft/Captcha/media/backgrounds/white-wave.png" afterPath="$PROJECT_DIR$/src/media/backgrounds/white-wave.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Snowsoft/Captcha/media/fonts/times_new_yorker.ttf" afterPath="$PROJECT_DIR$/src/media/fonts/times_new_yorker.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Snowsoft/Captcha/Captcha.php" afterPath="$PROJECT_DIR$/Snowsoft/Captcha/Captcha.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -28,21 +18,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="composer.json" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/composer.json">
+      <file leaf-file-name="Captcha.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Snowsoft/Captcha/Captcha.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="28" column="3" lean-forward="true" selection-start-line="28" selection-start-column="3" selection-end-line="28" selection-end-column="3" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Captcha.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Captcha.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-51">
-              <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="13" />
+            <state relative-caret-position="8">
+              <caret line="39" column="31" lean-forward="true" selection-start-line="39" selection-start-column="31" selection-end-line="39" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -58,6 +38,7 @@
       <list>
         <option value="$PROJECT_DIR$/src/Captcha.php" />
         <option value="$PROJECT_DIR$/composer.json" />
+        <option value="$PROJECT_DIR$/Snowsoft/Captcha/Captcha.php" />
       </list>
     </option>
   </component>
@@ -112,7 +93,11 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
+              <option name="myItemId" value="Snowsoft" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Captcha" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -243,7 +228,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1483100395843</updated>
-      <workItem from="1483100397399" duration="6138000" />
+      <workItem from="1483100397399" duration="8709000" />
     </task>
     <task id="LOCAL-00001" summary="-">
       <created>1483100726038</created>
@@ -301,11 +286,25 @@
       <option name="project" value="LOCAL" />
       <updated>1483105397896</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="-">
+      <created>1483106549077</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1483106549077</updated>
+    </task>
+    <task id="LOCAL-00010" summary="-">
+      <created>1483106601017</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1483106601017</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6138000" />
+    <option name="totallyTimeSpent" value="8709000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
@@ -346,18 +345,18 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Captcha.php">
+    <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-51">
-          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="13" />
+        <state relative-caret-position="442">
+          <caret line="26" column="47" lean-forward="false" selection-start-line="26" selection-start-column="47" selection-end-line="26" selection-end-column="47" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
+    <entry file="file://$PROJECT_DIR$/Snowsoft/Captcha/Captcha.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="3" lean-forward="true" selection-start-line="28" selection-start-column="3" selection-end-line="28" selection-end-column="3" />
+        <state relative-caret-position="8">
+          <caret line="39" column="31" lean-forward="true" selection-start-line="39" selection-start-column="31" selection-end-line="39" selection-end-column="45" />
           <folding />
         </state>
       </provider>

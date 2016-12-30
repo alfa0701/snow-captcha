@@ -6,7 +6,7 @@
  * Time: 14:25
  */
 
-namespace Snowsoft;
+namespace Snowsoft\Captcha;
 
 
 class Captcha
@@ -37,7 +37,7 @@ class Captcha
     public static $custom_font = '';
 
 
-    public function __construct($settings)
+    public function __construct($settings=array())
     {
         if(!isset($_SESSION)) {
             session_start();
@@ -50,6 +50,7 @@ class Captcha
       self::$settings  = $settings;
       self::$bg_path   = dirname(__FILE__) . '/media/backgrounds/';
       self::$font_path = dirname(__FILE__) . '/media/fonts/';
+
     }
 
     public static function backgrounds()
@@ -86,6 +87,8 @@ class Captcha
             foreach(self::$settings as $key => $value ) $captcha_config[$key] = $value;
         }
         // Restrict certain values
+        $captcha_config['backgrounds'] = self::backgrounds();
+        $captcha_config['fonts'] = self::fonts();
         if( $captcha_config['min_length'] < 1 ) $captcha_config['min_length'] = 1;
         if( $captcha_config['angle_min'] < 0 ) $captcha_config['angle_min'] = 0;
         if( $captcha_config['angle_max'] > 10 ) $captcha_config['angle_max'] = 10;
@@ -121,9 +124,11 @@ class Captcha
 
         $_SESSION['_CAPTCHA']['config'] = serialize($captcha_config);
 
+
+
         return array(
             'code' => $captcha_config['code'],
-            'image_src' => $image_src
+            'image_src' => self::setImage()
         );
 
     }
@@ -148,13 +153,11 @@ class Captcha
           }
 
 
-          protected static  function setImage()
+          public static  function setImage()
           {
-              // Draw the image
-              if( isset($_GET['_CAPTCHA']) ) {
-
+                 if(isset($_SESSION['_CAPTCHA'])):
                   $captcha_config = unserialize($_SESSION['_CAPTCHA']['config']);
-                  if( !$captcha_config ) exit();
+                  if(isset($captcha_config) and  !$captcha_config ) exit();
 
                   unset($_SESSION['_CAPTCHA']);
 
@@ -178,7 +181,7 @@ class Captcha
 
                   //Set the font size.
                   $font_size = mt_rand($captcha_config['min_font_size'], $captcha_config['max_font_size']);
-                  $text_box_size = imagettfbbox($font_size, $angle, $font, $captcha_config['code']);
+                  $text_box_size = imagettfbbox($font_size, $angle, self::$font_path.$font, $captcha_config['code']);
 
                   // Determine text position
                   $box_width = abs($text_box_size[6] - $text_box_size[2]);
@@ -203,13 +206,23 @@ class Captcha
                   }
 
                   // Draw text
-                  imagettftext($captcha, $font_size, $angle, $text_pos_x, $text_pos_y, $color, $font, $captcha_config['code']);
+                  imagettftext($captcha, $font_size, $angle, $text_pos_x, $text_pos_y, $color, self::$font_path.$font, $captcha_config['code']);
+
+                  imagefilter($captcha, IMG_FILTER_PIXELATE, 1, true);
+                  imagefilter($captcha, IMG_FILTER_MEAN_REMOVAL);
 
                   // Output image
-                  header("Content-type: image/png");
+                //  header("Content-type: image/png");
+                  ob_start(); // Let's start output buffering.
                   imagepng($captcha);
 
-              }
+                  $imagedata = ob_get_contents();
+                  // Clear the output buffer
+                  ob_end_clean();
+
+                  return 'data:image/png;base64,'.base64_encode($imagedata);
+                  endif;
+
           }
 
 
